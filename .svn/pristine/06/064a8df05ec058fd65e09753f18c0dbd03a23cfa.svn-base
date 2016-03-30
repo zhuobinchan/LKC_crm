@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>LKC_crm</display-name>
+  
+      <filter>
+        <filter-name>charset</filter-name>
+        <filter-class>com.crm.filter.CharsetFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>charset</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>system_adminServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.system_adminServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>system_adminServlet</servlet-name>
+    <url-pattern>/servlet/system_adminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.loginServlet</servlet-class>
+  	</servlet>
+
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/servlet/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_Admin_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_Admin_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_Admin_add_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_Admin_add_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_Admin_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.add_Admin_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_Admin_UIServlet</servlet-name>
+    <servlet-class>com.crm.web.UI.add_Admin_UIServlet</servlet-class>
+  </servlet> 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_detail_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_detail_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_Admin_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.delete_Admin_Servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goods_Admin_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.goods_Admin_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_Admin_delete_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_Admin_delete_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_Admin_updata_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_Admin_updata_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goods_add_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.goods_add_servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>updateFileServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.updateFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>downloadFileServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.downloadFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadUIServlet</servlet-name>
+    <servlet-class>com.crm.web.UI.UploadUIServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_linkman_detail_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_linkman_detail_servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>client_Admin_Servlet</servlet-name>
+    <url-pattern>/servlet/client_Admin_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>client_Admin_add_servlet</servlet-name>
+    <url-pattern>/servlet/client_Admin_add_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_Admin_Servlet</servlet-name>
+    <url-pattern>/servlet/add_Admin_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_Admin_UIServlet</servlet-name>
+    <url-pattern>/servlet/add_Admin_UIServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>client_detail_servlet</servlet-name>
+    <url-pattern>/servlet/client_detail_servlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>delete_Admin_Servlet</servlet-name>
+    <url-pattern>/servlet/delete_Admin_Servlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>goods_Admin_Servlet</servlet-name>
+    <url-pattern>/servlet/goods_Admin_Servlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>client_Admin_delete_servlet</servlet-name>
+    <url-pattern>/servlet/client_Admin_delete_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>client_Admin_updata_servlet</servlet-name>
+    <url-pattern>/servlet/client_Admin_updata_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>goods_add_servlet</servlet-name>
+    <url-pattern>/servlet/goods_add_servlet</url-pattern>
+  </servlet-mapping>
+
+  
+    <servlet-mapping>
+    <servlet-name>updateFileServlet</servlet-name>
+    <url-pattern>/servlet/updateFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+      <servlet-name>downloadFileServlet</servlet-name>
+    <url-pattern>/servlet/downloadFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadUIServlet</servlet-name>
+    <url-pattern>/servlet/UploadUIServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>client_linkman_detail_servlet</servlet-name>
+    <url-pattern>/servlet/client_linkman_detail_servlet</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    <servlet>
+        <servlet-name>client_linkman_detele_servlet</servlet-name>
+        <servlet-class>com.crm.web.controller.client_linkman_detele_servlet</servlet-class>
+    </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_linkman_updata_servlet</servlet-name>
+        <servlet-class>com.crm.web.controller.client_linkman_updata_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goods_delete_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.goods_delete_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goods_search_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.goods_search_servlet</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>feedbackUIServlet</servlet-name>
+    <servlet-class>com.crm.web.UI.feedbackUIServlet</servlet-class>
+  </servlet>
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>my_linkman_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.my_linkman_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goods_update_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.goods_update_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_feedbackServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.add_feedbackServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>client_analyse_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.client_analyse_servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_feedbackServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.delete_feedbackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>linkrecordServlet</servlet-name>
+    <servlet-class>com.crm.web.UI.linkrecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>add_linkrecordServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.add_linkrecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_linkrecordServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.delete_linkrecordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delete_sessionServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.delete_sessionServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>reset_Admin_pwd_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.reset_Admin_pwd_Servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>inExcelServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.inExcelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ExportExcelServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.ExportExcelServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>reset_SApswUIServlet</servlet-name>
+    <servlet-class>com.crm.web.UI.reset_SApswUIServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>contract_Admin_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.contract_Admin_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>search_pdf_servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.search_pdf_servlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>reset_CA_GA_Servlet</servlet-name>
+    <servlet-class>com.crm.web.controller.reset_CA_GA_Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>reset_CA_GA_UIServlet</servlet-name>
+    <servlet-class>com.crm.web.UI.reset_CA_GA_UIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Upload_contract_servlet</servlet-name>
+    <servlet-class>com.crm.web.UI.Upload_contract_servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>updateContractServlet</servlet-name>
+    <servlet-class>com.crm.web.controller.updateContractServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>client_linkman_detele_servlet</servlet-name>
+        <url-pattern>/servlet/client_linkman_detele_servlet</url-pattern>
+    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>client_linkman_updata_servlet</servlet-name>
+    <url-pattern>/servlet/client_linkman_updata_servlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>goods_delete_servlet</servlet-name>
+    <url-pattern>/servlet/goods_delete_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>goods_search_servlet</servlet-name>
+    <url-pattern>/servlet/goods_search_servlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>feedbackUIServlet</servlet-name>
+    <url-pattern>/servlet/feedbackUIServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>my_linkman_servlet</servlet-name>
+    <url-pattern>/servlet/my_linkman_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>goods_update_servlet</servlet-name>
+    <url-pattern>/servlet/goods_update_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_feedbackServlet</servlet-name>
+    <url-pattern>/servlet/add_feedbackServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>client_analyse_servlet</servlet-name>
+    <url-pattern>/servlet/client_analyse_servlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_feedbackServlet</servlet-name>
+    <url-pattern>/servlet/delete_feedbackServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>linkrecordServlet</servlet-name>
+    <url-pattern>/servlet/linkrecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>add_linkrecordServlet</servlet-name>
+    <url-pattern>/servlet/add_linkrecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_linkrecordServlet</servlet-name>
+    <url-pattern>/servlet/delete_linkrecordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delete_sessionServlet</servlet-name>
+    <url-pattern>/servlet/delete_sessionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>reset_Admin_pwd_Servlet</servlet-name>
+    <url-pattern>/servlet/reset_Admin_pwd_Servlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>inExcelServlet</servlet-name>
+    <url-pattern>/servlet/inExcelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportExcelServlet</servlet-name>
+    <url-pattern>/servlet/ExportExcelServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>reset_SApswUIServlet</servlet-name>
+    <url-pattern>/servlet/reset_SApswUIServlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>contract_Admin_Servlet</servlet-name>
+    <url-pattern>/servlet/contract_Admin_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>search_pdf_servlet</servlet-name>
+    <url-pattern>/servlet/search_pdf_servlet</url-pattern>
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>reset_CA_GA_Servlet</servlet-name>
+    <url-pattern>/servlet/reset_CA_GA_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>reset_CA_GA_UIServlet</servlet-name>
+    <url-pattern>/servlet/reset_CA_GA_UIServlet</url-pattern>
+
+
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Upload_contract_servlet</servlet-name>
+    <url-pattern>/servlet/Upload_contract_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateContractServlet</servlet-name>
+    <url-pattern>/servlet/updateContractServlet</url-pattern>
+  </servlet-mapping>
+    <jsp-config>
+        <taglib>
+            <taglib-uri>/findNameTags</taglib-uri>
+            <taglib-location>/WEB-INF/tlds/findName.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+
+
+</web-app>

@@ -1,0 +1,33 @@
+package com.crm.tagclass;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.tagext.SimpleTagSupport;
+
+import org.junit.Test;
+
+public class DateTag extends SimpleTagSupport {
+
+
+		@Override
+		public void doTag() throws JspException, IOException {
+		    Date nowdate = new Date();
+			DateFormat d8 = DateFormat.getDateTimeInstance();
+			String  date = d8.format(nowdate);
+			this.getJspContext().getOut().write(date);
+			System.out.println(date);
+		}
+		@Test
+		public static String getNowDate() {
+			Date nowdate = new Date();
+			DateFormat d8 = DateFormat.getDateTimeInstance();
+			String  date = d8.format(nowdate);
+			
+			return date;
+		}
+		
+	
+}
